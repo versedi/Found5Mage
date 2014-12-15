@@ -3,7 +3,7 @@
 ###### version 0.0.5 [only help purpose for now, no usage without some basic knowledge of Magento templating]
 
 ## Features
-1. Compass + SASS working, just go to:
+Compass + SASS working, just go to:
 
 	<code>
 		/magento/skin/frontend/Found5Mage/default/
@@ -16,7 +16,7 @@ and run:<br>
 
 And you can make any changes like you would normally do to Foundation Framework. 
 
-# Roadmap
+## Roadmap
 
 1. Fixes for jQuery conflicts. 
 2. Basic templates<br>
