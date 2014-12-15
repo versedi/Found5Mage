@@ -5,14 +5,14 @@
 ## Features
 Compass + SASS working, just go to:
 
-	<code>
+
 		/magento/skin/frontend/Found5Mage/default/
-	</code>
+
 <br>
 and run:<br>
-	<code>
+
 		bundle exec compass watch
-	</code>
+
 
 And you can make any changes like you would normally do to Foundation Framework. 
 
