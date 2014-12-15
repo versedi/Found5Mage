@@ -1,8 +1,9 @@
 # Found5Mage
 ##### Foundation 5 Framework for Magento 1.8 and up [not tested yet with 1.9]
-###### version 0.0.5 [only help purpose for now, no usage without some basic knowledge of Magento templating]
+###### version 0.0.5
 
-## Features
+## Info
+Requires knowledge of Foundation framework and Magento templating system. It's not a ready to use template [maybe someday...]
 Compass + SASS working, just go to:
 
 
