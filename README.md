@@ -21,7 +21,7 @@ And you can make any changes like you would normally do to Foundation Framework.
 
 ## Roadmap
 
-1. Fixes for jQuery conflicts. 
+~~1. Fixes for jQuery conflicts. ~~
 2. Basic templates<br>
 	a. 1 column
 	b. 2 columns-left
