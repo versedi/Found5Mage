@@ -36,25 +36,31 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
+<div class="off-canvas-wrap">
+    <div class="inner-wrap">
     <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="page">
         <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col2-right-layout">
-            <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-main">
-                    <?php echo $this->getChildHtml('global_messages') ?>
-                    <?php echo $this->getChildHtml('content') ?>
-                </div>
-                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
+        
+        <div class="row">
+            <?php echo $this->getChildHtml('breadcrumbs') ?>
+
+            <div class="large-8 columns content">
+                <?php echo $this->getChildHtml('global_messages') ?>
+                <?php echo $this->getChildHtml('content') ?>
+            </div>
+            <aside class="left-off-canvas-menu show-for-small-only">
+                <?php echo $this->getChildHtml('right') ?>
+            </aside>  
+            <div class="large-4 columns sidebar">
+                <?php echo $this->getChildHtml('right') ?>
             </div>
         </div>
-        <?php echo $this->getChildHtml('footer') ?>
-        <?php echo $this->getChildHtml('global_cookie_notice') ?>
-        <?php echo $this->getChildHtml('before_body_end') ?>
+        <div class="row">
+            <?php echo $this->getChildHtml('footer') ?>
+            <?php echo $this->getChildHtml('global_cookie_notice') ?>
+            <?php echo $this->getChildHtml('before_body_end') ?>
+        </div>
     </div>
 </div>
 <?php echo $this->getAbsoluteFooter() ?>
 </body>
-</html>

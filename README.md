@@ -1,6 +1,6 @@
 # Found5Mage
 ##### Foundation 5 Framework for Magento 1.8 and up [not tested yet with 1.9]
-###### version 0.0.5
+###### version 0.1.0
 
 
 ## Info

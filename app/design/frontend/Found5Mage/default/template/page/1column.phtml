@@ -36,14 +36,14 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
+<div class="somewrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="page">
+    <div class="row">
         <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col1-layout">
+        <div class="main-container lage-12 columns">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-main">
+                <div class="large-12 columns">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </div>
@@ -57,3 +57,4 @@
 <?php echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
+
