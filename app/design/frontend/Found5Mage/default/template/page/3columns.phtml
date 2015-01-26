@@ -40,10 +40,10 @@
         <div class="inner-wrap">
             <?php echo $this->getChildHtml('global_notices') ?>
             <?php echo $this->getChildHtml('header') ?>
-            <div class="main-container col3-layout">
+            <div class="main-container col3-layout row">
                 <div class="main">
                     <?php echo $this->getChildHtml('breadcrumbs') ?>
-                    <div class="large-4 columns col-left sidebar">
+                    <div class="large-3 columns col-left sidebar">
                         <?php echo $this->getChildHtml('left') ?>
                     </div>
                     
@@ -51,12 +51,12 @@
                         <?php echo $this->getChildHtml('left') ?>
                     </aside>
                     
-                    <div class="large-8 columns content">
+                    <div class="large-6 columns content">
                         <?php echo $this->getChildHtml('global_messages') ?>
                         <?php echo $this->getChildHtml('content') ?>
                     </div>
                     
-                    <div class="large-4 columns sidebar col-right">
+                    <div class="large-3 columns sidebar col-right">
                         <?php echo $this->getChildHtml('right') ?>
                     </div>
                     <aside class="right-off-canvas-menu show-for-small-only">

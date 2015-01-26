@@ -32,7 +32,7 @@
 <a class="left-off-canvas-toggle show-for-small-only" href="#" >Off Canvas Left</a>
 <a class="right-off-canvas-toggle show-for-small-only" href="#" >Off Canvas Right</a>
 
-<div class="row header-container panel">
+<header class="header row header-container panel" id="header">
     <div class="large-3 columns">
         <?php if ($this->getIsHomePage()):?>
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
@@ -49,9 +49,11 @@
         <?php echo $this->getChildHtml('topSearch') ?>
     </div>
     <div class="large-5 columns right">
-        <?php // echo $this->getChildHtml('store_language') ?>
+        <?php echo $this->getChildHtml('store_language') ?>
         <?php echo $this->getChildHtml('topLinks') ?>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
-</div>
-<?php // echo $this->getChildHtml('topMenu') ?>
+    <div class="large-12 columns">
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+</header>
