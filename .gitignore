@@ -1,0 +1,8 @@
+*.DS_Store
+/stylesheets/*
+app/design/frontend/found5mage/default/template/ajax_cart/*
+skin/frontend/found5mage/default/css/ajax_cart.css
+skin/frontend/found5mage/default/.sass-cache/*
+skin/frontend/found5mage/default/bower_components/*
+skin/frontend/found5mage/default/*.DS_Store
+skin/frontend/found5mage/default/stylesheets/*
