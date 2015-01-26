@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento responsive theme
+ *
+ * @category    design
+ * @package     found5mage_default
+ * @copyright   Copyright (c) 2014 versedi
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      Tadeusz Stępnikowski 'versedi' <kontakt@tadeuszstepnikowski.pl>
+ */
+
+-->
+<layout version="0.1.0">
+<!--
+Default layout, loads most of the pages
+-->
+
+    <default>  
+    <reference name="before_body_end">
+            <block type="core/template" name="jquery_noconflict" template="jquery/noconflict.phtml" before="-" />
+        </reference>
+    </default>
+
+</layout>
