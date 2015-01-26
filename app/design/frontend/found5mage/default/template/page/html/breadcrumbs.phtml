@@ -24,19 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="footer-container">
-    <div class="footer row">
-    	<div class="large-6 medium-12 small-12 columns">
-	        <?php echo $this->getChildHtml() ?>
-        </div>
-        <div class="large-6 medium-12 small-12 columns">
-	        <address><?php echo $this->getCopyright() ?></address>
-	        <p class="bugs">
-		        <?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'">
-		        <strong><?php echo $this->__('Report All Bugs') ?></strong></a> 
-		        <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?>
-		    </p>
-        </div>
-    </div>
-</div>
- 
+<?php if($crumbs && is_array($crumbs)): ?>
+<ul class="breadcrumbs">
+        <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+            <li class="<?php echo $_crumbName ?>">
+            <?php if($_crumbInfo['link']): ?>
+                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
+            <?php elseif($_crumbInfo['last']): ?>
+                <strong><?php echo $this->escapeHtml($_crumbInfo['label']) ?></strong>
+            <?php else: ?>
+                <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+            <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+</ul>
+<?php endif; ?>

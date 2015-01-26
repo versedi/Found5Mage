@@ -24,19 +24,21 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="footer-container">
-    <div class="footer row">
-    	<div class="large-6 medium-12 small-12 columns">
-	        <?php echo $this->getChildHtml() ?>
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->isSaleable()): ?>
+    <div class="add-to-cart row collapse">
+        <?php if(!$_product->isGrouped()): ?>
+        <div class="small-2 columns">
+	        <label for="qty"><span class="prefix"><?php echo $this->__('Qty:') ?></span></label>
         </div>
-        <div class="large-6 medium-12 small-12 columns">
-	        <address><?php echo $this->getCopyright() ?></address>
-	        <p class="bugs">
-		        <?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'">
-		        <strong><?php echo $this->__('Report All Bugs') ?></strong></a> 
-		        <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?>
-		    </p>
+        <div class="small-4 columns">
+	        <input class="input-text qty"  id="qty" name="qty" type="text" placeholder="<?php echo $this->__('Qty:') ?>" type="text" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>">
+        </div>
+        <?php endif; ?>
+        <div class="small-6 columns">
+	        <button onclick="productAddToCartForm.submit(this)" class="button postfix"><?php echo $buttonTitle ?></a>
         </div>
     </div>
-</div>
- 
+    <?php echo $this->getChildHtml('', true, true) ?>
+<?php endif; ?>

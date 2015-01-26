@@ -36,22 +36,24 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="somewrapper">
-    <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="row">
-        <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container lage-12 columns">
+   <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+		    <?php echo $this->getChildHtml('global_notices') ?>
+            <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container row">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="large-12 columns">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
-                </div>
             </div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('global_cookie_notice') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
+        <aside class="left-off-canvas-menu show-for-small-only">
+	        <?php echo $this->getChildHtml('left') ?>
+	    </aside>  
+	    <a class="exit-off-canvas"></a>
     </div>
 </div>
 <?php echo $this->getAbsoluteFooter() ?>

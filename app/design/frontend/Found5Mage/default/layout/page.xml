@@ -42,6 +42,8 @@ Default layout, loads most of the pages
 
 
                 <action method="addJs"><script>prototype/prototype.js</script></action>
+                <action method="addItem"><type>skin_js</type><name>bower_components/foundation/js/vendor/jquery.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/jquery/noconflict.js</name></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
                 <action method="addJs"><script>scriptaculous/builder.js</script></action>
@@ -56,8 +58,7 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/cookies.js</script></action> 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
                 <action method="addItem"><type>skin_js</type><name>bower_components/foundation/js/vendor/modernizr.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>bower_components/foundation/js/vendor/jquery.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/noConflict.js</name></action>
+               
               
               <!--  <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
